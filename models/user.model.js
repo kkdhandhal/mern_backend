@@ -8,35 +8,43 @@ var userSchema = new mongoose.Schema({
     //     // index: true,
     //      required: true,
     // },
-    usr_company: {
+    usr_id: {
         type: Number,
-        required:'This field is required'
-    },
-    usr_circle: {
-        type: Number,
-        required:'This field is required'
-    },
-    usr_divsion: {
-        type: Number,
-        required:'This field is required'
-    },
-    usr_sdn: {
-        type: Number,
-        required:'This field is required'
-    },
-    usr_code: {
-        type: Number,
-        required: 'This field is required',
+        unique: true,
         index: true,
-        unique: true
+        required:'This field is required'
     },
     usr_name: {
         type: String,
-        required: 'This field is required'
+        required:'This field is required'
+    },
+    usr_nameinit: {
+        type: String,
+        required:'This field is required'
+    },
+    usr_firstname: {
+        type: String,
+        required:'This field is required'
+    },
+    usr_midname: {
+        type: String,
+        required:'This field is required'
+    },
+     usr_lastname: {
+        type: String,
+        required:'This field is required'
+    },
+    usr_sdnloc: {
+        type: Number,
+        required:'This field is required'
+    },
+    usr_mobno: {
+        type: Number,
+        required: 'This field is required',
     },
     usr_pass: {
         type: String,
-        required:'This field is required'
+        required: 'This field is required'
     },
     usr_isact: {
         type: Boolean,

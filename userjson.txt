@@ -1,0 +1,13 @@
+
+{
+    "usr_id": 13857,
+    "usr_name": "kkdhandhal",
+    "usr_nameinit": "Mr.",
+    "usr_firstname": "Krushna",
+    "usr_midname": "Kanjibhai",
+    "usr_lastname": "Kanjibhai",
+    "usr_sdnloc": 382134,
+    "usr_mobno": 9978934988,
+    "usr_pass": "12345678",
+    "usr_isact": true
+  }
