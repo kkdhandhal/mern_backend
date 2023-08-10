@@ -1,13 +1,6 @@
 const mongoose = require('mongoose');
 
 var feederSchema = new mongoose.Schema({
-   // _id: false,
-    // _id: {
-    //     type: Number,
-    //      unique: true,
-    //     // index: true,
-    //      required: true,
-    // },
     fdr_loccode: {
         type: Number,
         required:'This field is required'
@@ -36,21 +29,6 @@ var feederSchema = new mongoose.Schema({
         type: Number,
         required:'This field is required'
     },
-    // fdr_divsion: {
-    //     type: Number,
-    //     required:'This field is required'
-    // },
-    // fdr_ss: {
-    //     type: String,
-    //     required:'This field is required'
-    // },
-    // fdr_sdn: {
-    //     type: Number,
-    //     required:'This field is required'
-    // },
-   
-   
-    
 });
 
 mongoose.model('Feeder',feederSchema);

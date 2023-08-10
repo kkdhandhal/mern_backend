@@ -14,5 +14,6 @@ const mongodbConnect = async () => {
 require('./feeder.model')
 require('./user.model')
 require('./office.model')
+require('./intruption.model')
 
 module.exports =  mongodbConnect;
