@@ -3,7 +3,7 @@ var esd = express.Router();
 
 
 const mongoose = require('mongoose');
-const mongodbConnect = require('../../models/db');
+const mongodbConnect = require('../../../models/db');
 const ESD = mongoose.model('ESD');
 
 function isNumber(value) {
@@ -40,13 +40,13 @@ function isNumber(value) {
 //     }
 //  })
 
-feeder.post('/esd/create', async (req, res) => { 
+esd.post('/create', async (req, res) => { 
     console.log("Post Request served" + req.body.fdr_company);
     // await Feeder.findOne({ fdr_code: req.body.fdr_code }).then((docs) => {
         
     // })
     const esd_entry = new ESD({
-        esd_id: req.body.esd_id,
+        //esd_id: req.body.esd_id,
         esd_fdr_code: req.body.esd_fdr_code,
         esd_st_date: req.body.esd_st_date,
         esd_st_time: req.body.esd_st_time,
@@ -63,12 +63,16 @@ feeder.post('/esd/create', async (req, res) => {
     });
     await esd_entry.save()
     .then((data) => {
-      res.send(data);
-    })
+      res.status(200).send(
+      {
+        db_msg:"ESD Entry saved successfully",
+        db_code: 1,
+      })
     .catch((err) => {
       res.status(500).send({
-        message:
+        db_msg:
           err.message || "Some error occurred while creating the Message.",
+        db_code: -1,
       });
     });
 });
