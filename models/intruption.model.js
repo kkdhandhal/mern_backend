@@ -2,10 +2,10 @@ const { Timestamp } = require('mongodb');
 const mongoose = require('mongoose');
 
 var esdSchema = new mongoose.Schema({
-    esd_id: {
-        type: Number,
-        required:'This field is required'
-    },
+    // esd_id: {
+    //     type: Number,
+    //     required:'This field is required'
+    // },
     esd_fdr_code: {
         type: Number,
         required: 'This field is required',
@@ -27,7 +27,7 @@ var esdSchema = new mongoose.Schema({
         required: 'This field is required'
     },
     esd_duration: {
-        type: String,
+        type: Number,
         required: 'This field is required'
     },
     esd_cons_affected: {

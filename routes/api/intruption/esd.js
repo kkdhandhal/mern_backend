@@ -41,7 +41,7 @@ function isNumber(value) {
 //  })
 
 esd.post('/create', async (req, res) => { 
-    console.log("Post Request served" + req.body.fdr_company);
+    console.log("Post Request served" + req.body.esd_fdr_code);
     // await Feeder.findOne({ fdr_code: req.body.fdr_code }).then((docs) => {
         
     // })
@@ -62,11 +62,12 @@ esd.post('/create', async (req, res) => {
         
     });
     await esd_entry.save()
-    .then((data) => {
-      res.status(200).send(
-      {
-        db_msg:"ESD Entry saved successfully",
-        db_code: 1,
+      .then((data) => {
+        res.status(200).send(
+        {
+          db_msg: "ESD Entry saved successfully",
+          db_code: 1,
+        });
       })
     .catch((err) => {
       res.status(500).send({

@@ -51,8 +51,8 @@ feeder.post('/create', async (req, res) => {
         fdr_name: req.body.fdr_name,
         fdr_type: req.body.fdr_type,
         fdr_category: req.body.fdr_category,
-        fdr_adm_sdn: req.body.fdr_adm_sdn
-        // fdr_name: req.body.fdr_name,
+        fdr_adm_sdn: req.body.fdr_adm_sdn,
+        fdr_cons: req.body.fdr_cons
         // fdr_category: req.body.fdr_category
         
     });

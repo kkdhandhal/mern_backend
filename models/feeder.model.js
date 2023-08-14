@@ -5,11 +5,14 @@ var feederSchema = new mongoose.Schema({
         type: Number,
         required:'This field is required'
     },
-     fdr_code: {
+    fdr_code: {
         type: Number,
         required: 'This field is required',
         index: true,
         unique: true
+    },
+    fdr_cons: {
+        type: Number,
     },
      fdr_name: {
         type: String,
